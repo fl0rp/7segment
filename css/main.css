@@ -1,3 +1,44 @@
+@keyframes animate-aberration {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(0 0 0 rgba(0, 255, 255, 0.8));
+  }
+  40% {
+    filter: drop-shadow(0 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(0 0 0 rgba(0, 255, 255, 0.8));
+  }
+  40.1% {
+    filter: drop-shadow(-0.2em 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(0.2em 0 0 rgba(0, 255, 255, 0.8));
+  }
+  45% {
+    filter: drop-shadow(-0.2em 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(0.2em 0 0 rgba(0, 255, 255, 0.8));
+  }
+  45.1% {
+    filter: drop-shadow(0.1em 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(-0.1em 0 0 rgba(0, 255, 255, 0.8));
+  }
+  60% {
+    filter: drop-shadow(0.1em 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(-0.1em 0 0 rgba(0, 255, 255, 0.8));
+  }
+  60.1% {
+    filter: drop-shadow(0em 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(0em 0 0 rgba(0, 255, 255, 0.8));
+  }
+  70% {
+    filter: drop-shadow(0 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(0 0 0 rgba(0, 255, 255, 0.8));
+  }
+  70.1% {
+    filter: drop-shadow(0.4em 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(-0.4em 0 0 rgba(0, 255, 255, 0.8));
+  }
+  73% {
+    filter: drop-shadow(0.4em 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(-0.4em 0 0 rgba(0, 255, 255, 0.8));
+  }
+  73.1% {
+    filter: drop-shadow(-0.1em 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(0.1em 0 0 rgba(0, 255, 255, 0.8));
+  }
+  99.9% {
+    filter: drop-shadow(-0.1em 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(0.1em 0 0 rgba(0, 255, 255, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(255, 0, 0, 0.8)) drop-shadow(0 0 0 rgba(0, 255, 255, 0.8));
+  }
+}
 *,
 *:before,
 *:after {
@@ -25,7 +66,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  color: #ff8800;
+  color: #ffffff;
   text-decoration: none;
   display: inline-block;
 }
@@ -35,15 +76,15 @@ a {
   width: 114px;
   height: 218px;
   display: inline-block;
+  animation: animate-aberration 5s linear infinite;
 }
 .display7segment .seg {
   position: absolute;
   top: 50%;
   left: 50%;
   margin: -5px 0 0 -45px;
-  color: #ff8800;
+  color: #ffffff;
   background-color: currentColor;
-  box-shadow: 0 0 20px 0 currentColor;
   width: 90px;
   height: 10px;
   transition: all 0.45s ease-in-out 0s;
@@ -66,15 +107,6 @@ a {
 .display7segment .seg:after {
   border-left: 5px solid currentColor;
   left: 100%;
-}
-.display7segment.r1 .seg {
-  color: #b239ff;
-}
-.display7segment.r2 .seg {
-  color: #05b9ec;
-}
-.display7segment.r3 .seg {
-  color: #6800e7;
 }
 .display7segment.digit0 .seg0 {
   -webkit-transform: translate(0px, -104px) rotate(0deg);
